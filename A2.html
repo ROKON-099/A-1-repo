@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive DOM Example</title>
+  <style>
+    #para {
+      font-size: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <p id="para">Hello World</p>
+    <button id="btn">Click Me</button>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+    const paragraph = document.getElementById('para');
+    const button = document.getElementById('btn');
+
+    // click event
+    button.addEventListener('click', () => {
+      // Text change
+      paragraph.innerText = "Hello ChatGPT!";
+
+      // Random background color for container
+      const colors = ["lightblue", "lightgreen", "lightcoral", "lightyellow", "lightpink"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      container.style.backgroundColor = randomColor;
+
+      // Random text color for paragraph
+      const textColors = ["blue", "green", "red", "purple", "orange"];
+      const randomTextColor = textColors[Math.floor(Math.random() * textColors.length)];
+      paragraph.style.color = randomTextColor;
+    });
+  </script>
+
+</body>
+</html>
